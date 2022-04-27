@@ -65,38 +65,12 @@ $active_record = TRUE;
 $query_builder = TRUE;
 
 // AWS 고객사 실서버 
-// $db['default'] = array(
-// 	'dsn'	=> '',
-// 	'hostname' => '3.110.0.239',
-// 	'username' => 'sususoft_mysql',
-// 	'password' => 'SofTSuSu!0514@',
-// 	'database' => 'sususoft_dilri_db',
-// 	'dbdriver' => 'mysql',
-// 	'dbprefix' => '',
-// 	'pconnect' => FALSE,
-// 	'db_debug' => FALSE,
-// 	'cache_on' => FALSE,
-// 	'cachedir' => '',
-// 	'char_set' => 'utf8mb4',
-// 	'dbcollat' => 'utf8mb4_unicode_ci',
-// 	'swap_pre' => '',
-// 	'autoinit' => TRUE,
-// 	'encrypt' => FALSE,
-// 	'compress' => FALSE,
-// 	'stricton' => FALSE,
-// 	'failover' => array(),
-// 	'save_queries' => TRUE,
-// 	'port' => '3306'
-// );
-
-
-//개발 서버 납품전에 지워주세요.
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '175.126.111.82',
-	'username' => 'sususoft',
-	'password' => '#@!sususoft#@!',
-	'database' => 'sususoft_DB',
+	'hostname' => '3.110.0.239',
+	'username' => 'sususoft_mysql',
+	'password' => 'SofTSuSu!0514@',
+	'database' => 'sususoft_dilri_db',
 	'dbdriver' => 'mysql',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
@@ -114,3 +88,29 @@ $db['default'] = array(
 	'save_queries' => TRUE,
 	'port' => '3306'
 );
+
+
+//개발 서버 납품전에 지워주세요.
+// $db['default'] = array(
+// 	'dsn'	=> '',
+// 	'hostname' => '175.126.111.82',
+// 	'username' => 'sususoft',
+// 	'password' => '#@!sususoft#@!',
+// 	'database' => 'sususoft_DB',
+// 	'dbdriver' => 'mysql',
+// 	'dbprefix' => '',
+// 	'pconnect' => FALSE,
+// 	'db_debug' => FALSE,
+// 	'cache_on' => FALSE,
+// 	'cachedir' => '',
+// 	'char_set' => 'utf8mb4',
+// 	'dbcollat' => 'utf8mb4_unicode_ci',
+// 	'swap_pre' => '',
+// 	'autoinit' => TRUE,
+// 	'encrypt' => FALSE,
+// 	'compress' => FALSE,
+// 	'stricton' => FALSE,
+// 	'failover' => array(),
+// 	'save_queries' => TRUE,
+// 	'port' => '3306'
+// );

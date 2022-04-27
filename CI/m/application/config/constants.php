@@ -103,10 +103,10 @@ define("_HTTP","http://");
 define('NO_CONTENTS', "조회된 컨텐츠가 없습니다.");
 
 /* 초기 세팅 */
-define("SITE_NAME",	"sususoft");
-define("SITE_DOMAIN",	"rocateerdev.co.kr");
+define("SITE_NAME",	"dilri");
+define("SITE_DOMAIN",	"dilri.com");
 define("SERVICE_NAME",'딜리');
-define("COOKIE_DOMAIN",	".rocateerdev.co.kr");
+define("COOKIE_DOMAIN",	".dilri.com");
 
 /* 워크 체크 연결 키 */
 define('PROJECT_IDX', 65);

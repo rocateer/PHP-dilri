@@ -13,7 +13,7 @@
     <div style="width:100%; height:100%; margin: 0 auto; background-color: #F9F9F9;">
       <div style="max-width:600px;width: 100%; height:auto; margin: 0 auto; padding: 44px 20px 60px 20px;box-sizing: border-box;background-color: #F9F9F9;">
         <header>
-          <img src="http://sususoft.m.rocateerdev.co.kr/images/login_logo.png" alt="<?=SERVICE_NAME?>" style="width:171px;">
+          <img src="http://m.dilri.com/images/login_logo.png" alt="<?=SERVICE_NAME?>" style="width:171px;">
         </header>
         <p style="font-size:26px; font-weight: bold; font-family: 'NotoSansKR-Bold'; letter-spacing: -1.3px;margin:60px 0 30px 0;"><?=$this->global_function->get_translation('lang_member_pw_change_00698', $data['current_lang'], "비밀번호 변경")?></p>
         <div style="background:#fff; border-radius: 10px; padding:40px; box-sizing:border-box;">

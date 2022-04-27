@@ -19,7 +19,7 @@ class Cron extends MY_Controller {
 
   //매주 일요일
   /*
-  0 0 * * 0 /usr/bin/curl --silent --compressed sususoft.pw.rocateerdev.co.kr/cron/review_complete_alarm
+  0 0 * * 0 /usr/bin/curl --silent --compressed pw.dilri.com/cron/review_complete_alarm
   */
   public function review_complete_alarm(){
     //알람 107 :: 새로운 평가가 완료 되었습니다.
@@ -37,18 +37,18 @@ class Cron extends MY_Controller {
 
   //5초마다 실행
   /*
-  * * * * * /usr/bin/curl --silent --compressed p.pw.rocateerdev.co.kr/cron/alarm_send
-  * * * * * sleep 5; /usr/bin/curl --silent --compressed p.pw.rocateerdev.co.kr/cron/alarm_send
-  * * * * * sleep 10; /usr/bin/curl --silent --compressed p.pw.rocateerdev.co.kr/cron/alarm_send
-  * * * * * sleep 15; /usr/bin/curl --silent --compressed p.pw.rocateerdev.co.kr/cron/alarm_send
-  * * * * * sleep 20; /usr/bin/curl --silent --compressed p.pw.rocateerdev.co.kr/cron/alarm_send
-  * * * * * sleep 25; /usr/bin/curl --silent --compressed p.pw.rocateerdev.co.kr/cron/alarm_send
-  * * * * * sleep 30; /usr/bin/curl --silent --compressed p.pw.rocateerdev.co.kr/cron/alarm_send
-  * * * * * sleep 35; /usr/bin/curl --silent --compressed p.pw.rocateerdev.co.kr/cron/alarm_send
-  * * * * * sleep 40; /usr/bin/curl --silent --compressed p.pw.rocateerdev.co.kr/cron/alarm_send
-  * * * * * sleep 45; /usr/bin/curl --silent --compressed p.pw.rocateerdev.co.kr/cron/alarm_send
-  * * * * * sleep 50; /usr/bin/curl --silent --compressed p.pw.rocateerdev.co.kr/cron/alarm_send
-  * * * * * sleep 55; /usr/bin/curl --silent --compressed p.pw.rocateerdev.co.kr/cron/alarm_send
+  * * * * * /usr/bin/curl --silent --compressed pw.dilri.com/cron/alarm_send
+  * * * * * sleep 5; /usr/bin/curl --silent --compressed pw.dilri.com/cron/alarm_send
+  * * * * * sleep 10; /usr/bin/curl --silent --compressed pw.dilri.com/cron/alarm_send
+  * * * * * sleep 15; /usr/bin/curl --silent --compressed pw.dilri.com/cron/alarm_send
+  * * * * * sleep 20; /usr/bin/curl --silent --compressed pw.dilri.com/cron/alarm_send
+  * * * * * sleep 25; /usr/bin/curl --silent --compressed pw.dilri.com/cron/alarm_send
+  * * * * * sleep 30; /usr/bin/curl --silent --compressed pw.dilri.com/cron/alarm_send
+  * * * * * sleep 35; /usr/bin/curl --silent --compressed pw.dilri.com/cron/alarm_send
+  * * * * * sleep 40; /usr/bin/curl --silent --compressed pw.dilri.com/cron/alarm_send
+  * * * * * sleep 45; /usr/bin/curl --silent --compressed pw.dilri.com/cron/alarm_send
+  * * * * * sleep 50; /usr/bin/curl --silent --compressed pw.dilri.com/cron/alarm_send
+  * * * * * sleep 55; /usr/bin/curl --silent --compressed pw.dilri.com/cron/alarm_send
   */
   public function alarm_send(){
     $this->model_cron->alarm_send();
