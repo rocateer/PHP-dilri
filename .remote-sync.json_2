@@ -1,0 +1,19 @@
+{
+  "uploadOnSave": true,
+  "useAtomicWrites": false,
+  "deleteLocal": false,
+  "port": 22,
+  "transport": "sftp",
+  "hostname": "3.110.0.239",
+  "username": "sususoft_ftp",
+  "password": "sususoft0514",
+  "keyfile": "D:\\Github\\PHP-sususoft\\key\\sususoft_key_m.ppk",
+  "target": "/home/sususoft_ftp/html/",
+  "promptForPass": false,
+  "secure": false,
+  "ignore": [
+    ".remote-sync.json",
+    ".git/**",
+    "README.md"
+  ]    
+}

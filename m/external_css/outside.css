@@ -1,0 +1,97 @@
+/*
+ *  MEMO : 외부 모듈의 스타일을 수정하는 css입니다.
+ * 작성자 : 민지
+ * 작성일 : 2020/02/25.
+*/
+
+/* page */
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets{position: absolute;z-index: 1;left:50%; transform: translateX(-50%); bottom:-30px;}
+.swiper-pagination-bullet{background: #E5E5E5;opacity: 1}
+.swiper-pagination-bullet-active{background:#009648 }
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet{margin: 0 2px;}
+.swiper-pagination-bullet{width: 6px;height: 6px;}
+/* swiper */
+.swiper-container-horizontal > .swiper-scrollbar{bottom: 12px;height: 2px;background:rgba(255,255,255,0.5); width:calc(100% - 200px); left:100px}
+.swiper-scrollbar-drag{background: #fff;width: 50%;}
+
+.main_visual{overflow: visible;}
+.main_visual .img_box{width: 100%;height: 100%;}
+.main_visual .swiper-slide{width: 100%;padding-top: 100%;position: relative;height: 0;}
+.main_visual .swiper-slide .img_box img{position: absolute;z-index: 1;top:0;left:0;width: 100%;height: 100%;}
+.main_visual .mark_best{position: absolute;z-index: 12;width: 60px;top:15px;left:15px;}
+.none_swiper{height: 30px;}
+.none_swiper .mark_best{position: absolute;z-index: 12;width: 60px;top:0;left:15px;}
+
+.modal_more{background-color: #FCFCFC;width: 100%;height: auto;position: fixed; z-index: 211; bottom:0;left:0;}
+.modal_more .more_ul>li{width: 100%;border-bottom: 1px solid #F3F3F3;box-sizing: border-box;}
+.modal_more .more_ul>li a{display: block;-webkit-tap-highlight-color: rgba(0,0,0,0.02);padding: 15px 15px; box-sizing: border-box;}
+.modal_more .more_ul>li.close{margin-top: 7px;font-family: 'NirmalaB';}
+.modal_photo_reg{background-color: #FCFCFC;width: 100%;height: auto;position: fixed; z-index: 211; bottom:0;left:0;}
+.modal_photo_reg .more_ul>li{width: 100%;border-bottom: 1px solid #F3F3F3;box-sizing: border-box;}
+.modal_photo_reg .more_ul>li a{display: block;-webkit-tap-highlight-color: rgba(0,0,0,0.02);padding: 15px 15px; box-sizing: border-box;}
+.modal_photo_reg .more_ul>li.close{margin-top: 7px;font-family: 'NirmalaB';}
+
+.modal_report{width: 300px;height: auto;border-radius: 2px;padding: 30px 20px;box-sizing: border-box;}
+.modal_report .title{text-align: center;margin-bottom: 16px;font-size: 16px;font-family: 'NirmalaB';color:#E56353}
+.modal_report .txt{line-height: 24px;margin-bottom: 20px;}
+.modal_report textarea{height:146px;}
+
+/* .tag-editor */
+.tag-editor .tag-editor-spacer{width: 0;}
+.tag-editor div{padding: 2px 4px;}
+.tag-editor{height: 150px;border: 1px solid #ddd; border-radius: 2px;padding: 16px;box-sizing: border-box;}
+.tag-editor .tag-editor-tag{border: 0;color:#000;padding-left: 16px;padding-right: 8px;line-height: 1.5;height: 25px;}
+.tag-editor .tag-editor-delete{border: 0;background: url('/images/i_delete.png') no-repeat right center;width: 16px;background-size: 16px;height: 25px;margin-right: 18px;}
+
+/* home */
+.state{font-size: 10px;color:#FFFFFF;background: #009648;border-radius: 4px;padding: 4px 5px;margin-right: 5px;}
+.state.comp{background: #7F7F7F}
+.category_ul{flex-wrap:wrap;display: inline-flex;}
+.category_ul>li img{width: 100%;padding: 6px 15px 0;box-sizing:border-box;}
+.category_ul>li{position: relative;text-align: center;float: left; width: calc(33.33% - 4px);padding: 7px;box-sizing: border-box;margin: 0 6px 6px 0}
+.category_ul>li:nth-child(3n){margin-right: 0;}
+.category_ul>li p{font-size: 12px;color:#666666;margin-top: 4px;margin-bottom: 5px;}
+.category_ul>li input[type="checkbox"] + label{width: 100%; margin-right: 0;height: 100%; position: absolute;top:0;left:0}
+.category_ul>li input[type="checkbox"]:checked + label{border: 1px solid #009648; border-radius: 15px; box-sizing:border-box;}
+
+.modal_place_slt{transform: translate(0,0);top:62px;left:15px;padding: 20px; box-sizing: border-box;overflow: visible;width: 160px; height: auto;border-radius: 5px;}
+.modal_place_slt::after{position: absolute;z-index: -1;left:10px;top:-12px;content: '';display: block;background: url('/images/i_tail.png') no-repeat; background-size: 29px 20px;height: 20px;width: 29px;}
+.place_slt_ul{overflow: auto; height: auto; max-height:275px;}
+.place_slt_ul>li{position: relative;margin-bottom: 20px;font-size: 16px;color:#222;}
+.place_slt_ul>li.active{color:#009648; font-size: 16px; font-family: 'NirmalaB'}
+.place_slt_ul>li span{cursor: pointer;width: calc(100% - 20px);display: block;}
+.place_slt_ul>li:first-of-type{font-family: 'NotoSansKR-Bold';}
+.place_slt_ul>li:last-of-type{margin-bottom: 0;}
+.place_slt_ul>li img.btn_delete{cursor: pointer;position: absolute;z-index: 1;width: 21px; top:0; right:0; padding: 1px;}
+.modal_place_slt .btn_add{text-align: left;width: 100%; position: relative;display: block; margin-top: 20px;font-size: 16px;color:#999;}
+.modal_place_slt .btn_add img{width: 21px;position: absolute;z-index: 1;top:0;right:0;padding: 1px;}
+.scroll_none::-webkit-scrollbar {display: none;}
+.scroll_none{-ms-overflow-style: none;}
+
+.modal_place_slt.center{top:50%;left:50%;transform: translate(-50%,-50%);}
+.modal_place_slt.center::after{content: '';display: none}
+
+.product_visual{height: 430px;-webkit-overflow-scrolling: touch}
+.product_visual .img_box{width: 100%;height: 100%;}
+.product_detail_info_ul{line-height: 27px;float: right;display:flex;font-size: 13px;font-family: 'Nirmala'}
+.product_detail_info_ul>li img{width: 20px;vertical-align: middle; margin-top: -4px;margin-left: 20px;}
+.product_detail_info_ul>li:first-of-type{margin-left: 0;}
+
+
+.modal_keyword_result{width: 100%;height: 100%;}
+
+.modal_cancel_alarm{border-radius: 5px;height:auto;margin: 30px 15px;width:calc(100% - 30px);left:calc(50% - 15px);bottom:0;top:auto;transform: translate(-50%,0);}
+.md_txt{line-height: 24px;margin: 16px 0;}
+
+.modal_place_add .reg_box{overflow:auto;height:298px;position: fixed; z-index: 1;background: #fff;width: 100%;left:0;bottom:0;padding: 20px 15px 30px;box-sizing: border-box;}
+.modal_place_add h5{text-align: left;}
+.modal_place_add .reg_box input{margin: 16px 0 4px;}
+.modal_place_add #map_ma{height:auto!important; min-height:calc(100vh - 298px)}
+
+.modal_badge_detail{text-align: center;background-color: #FCFCFC;width: 100%;height: auto;position: fixed; z-index: 211; bottom:0;left:0;padding: 50px 15px;box-sizing: border-box;}
+.modal_badge_detail img{width: 91px;margin: 0 auto;}
+.modal_badge_detail h4{color:#4C4C4C; margin: 12px 0 16px;}
+.modal_badge_detail .txt{color:#4C4C4C}
+
+.modal_search_filter .price_wrap .unit{top:5px;}
+#reply_back{display: none;width: 100%;height: 100%;position: fixed; z-index: 8;top:0;left:0;background: rgba(0,0,0,0.5);}

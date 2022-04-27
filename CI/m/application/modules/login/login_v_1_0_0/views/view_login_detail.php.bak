@@ -1,0 +1,134 @@
+<header>
+  <a class="btn_back" href="javascript:history.go(-1)"><img src="/images/head_btn_close.png" alt="닫기"></a>
+</header>
+
+<div class="login_wrap">
+  <img src="/images/login_logo.png" alt="CHORECARE" class="logo">
+  <input type="text" id="member_id" name="member_id" placeholder="이메일 주소를 입력하세요">
+  <input type="password" id="member_pw" name="member_pw" placeholder="비밀번호를 입력하세요" class="mt20">
+  <ul class="login_find_ul">
+    <li>
+      <a href="/<?=mapping('find_pw')?>">비밀번호 찾기</a>
+    </li>
+    <li>
+      <a href="/<?=mapping('find_id')?>">아이디찾기</a>
+    </li>
+  </ul>
+  <div class="btn_full_weight btn_point mb40 row">
+    <a href="javascript:void(0)" onClick="login_action_member();">로그인</a>
+  </div>
+  <a href="/<?=mapping('join')?>" class="go_join">아직 단골가게 회원이 아니시라면? 회원가입하기</a>
+</div>
+
+<input type="hidden" name="device_os" id="device_os" value="">
+<input type="hidden" name="gcm_key" id="gcm_key" value="">
+
+<form id="hidden_form" name="hidden_form"  method="get" >
+  <?php
+  foreach($_GET as $key => $value){
+  if($key !="return_url"){
+  ?>
+  <input type="hidden" name="<?=$key?>" id="<?=$key?>" value="<?=$value?>">
+  <?php }}?>
+</form>
+<script>
+
+history.replaceState({ data: 'testData2' }, null, '/');
+
+var agent ="<?=$agent?>";
+var app_yn ="Y";
+
+function login_action_member(){
+
+var form_data = {
+  'device_os' : $('#device_os').val(),
+  'gcm_key' : $('#gcm_key').val(),
+  'member_id' : $('#member_id').val(),
+  'member_pw' : $('#member_pw').val()
+};
+
+$.ajax({
+  url      : "/<?=mapping('login')?>/login_action_member",
+  type     : 'POST',
+  dataType : 'json',
+  async    : true,
+  data     : form_data,
+  success: function(result){
+    if(result.code == '-1'){
+    alert(result.code_msg);
+    $("#"+result.focus_id).focus();
+    return;
+    }
+    // 0:실패 1:성공
+    if(result.code == "0") {
+
+      alert(result.code_msg);
+    } else {
+      alert(result.code_msg);
+      if(app_yn=="Y"){
+        api_request_login('',result.member_idx,result.member_id);
+        setTimeout(function() {
+          member_login_url();
+         }, 1000);
+      }else{
+        member_login_url();
+      }
+    }
+  }
+});
+}
+
+//api로그인
+function api_request_login(user_type,user_idx,user_name){
+if(agent == 'android') {
+  window.rocateer.request_login(user_type,user_idx,user_name);
+} else if (agent == 'ios') {
+  var message = {
+                 "request_type" : "request_login",
+                 "user_type" : user_type,
+                 "user_idx" : String(user_idx),
+                 "user_name" : user_name,
+                };
+  window.webkit.messageHandlers.native.postMessage(message);
+}
+}
+
+
+// 로그인후  url
+function member_login_url(){
+<?if($return_url !=""){?>
+$("#hidden_form")[0].action="<?=$return_url?>";
+$("#hidden_form")[0].submit();
+<?}else{?>
+location.href ='/<?=mapping('main')?>';
+<?}?>
+}
+</script>
+
+<script>
+//  요청 :: 디바이스 gcmkey
+function api_request_device_gcmkey(){
+  if(agent == 'android') {
+    window.rocateer.request_device_gcmkey();
+  } else if (agent == 'ios') {
+    var message = {
+           "request_type" : "request_device_gcmkey",
+          };
+    window.webkit.messageHandlers.native.postMessage(message);
+  }
+}
+
+//  응답 :: 앱에서 받아서  데이타 처리
+function api_reponse_device_gcmkey(device_os,gcm_key){
+  $("#device_os").val(device_os);
+  $("#gcm_key").val(gcm_key);
+}
+
+$(function(){
+  if(agent!="pc"){
+    setTimeout(function() {
+          api_request_device_gcmkey();
+     }, 2000);
+  }
+});
+</script>

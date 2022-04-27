@@ -1,0 +1,273 @@
+/*
+ *  MEMO : 프로젝트 내부 공통 스타일 파일입니다.
+ * 작성자 : 민지
+ * 작성일 : 2021/03/29.
+*/
+@charset "utf-8";
+
+@font-face {
+  font-family: 'Nirmala';
+  font-style: normal;
+  font-weight: 300;
+  src: local('NotoSansKR-Regular'),
+       local('NotoSansKR-Regular'),
+       /* url(/fonts/Nirmala.woff2) format('woff2'), */
+       url(/fonts/NotoSansKR-Regular.woff) format('woff')
+       /* url(/fonts/Nirmala.ttf) format('truetype'); */
+}
+
+@font-face {
+  font-family: 'NirmalaB';
+  font-style: normal;
+  font-weight: 400;
+  src: local('NotoSansKR-Bold'),
+       local('NotoSansKR-Bold'),
+       /* url(/fonts/NirmalaB.woff2) format('woff2'), */
+       url(/fonts/NotoSansKR-Bold.woff2) format('woff2')
+       /* url(/fonts/NirmalaB.ttf) format('truetype'); */
+}
+
+@font-face {
+  font-family: 'NirmalaS';
+  font-style: normal;
+  font-weight: 200;
+  src: local('NirmalaS'),
+       local('NirmalaS'),
+       url(/fonts/NirmalaS.woff2) format('woff2'),
+       url(/fonts/NirmalaS.woff) format('woff'),
+       url(/fonts/NirmalaS.ttf) format('truetype');
+}
+
+body,th,td,input,select,textarea,button, div, span, label {font-family:"Nirmala", sans-serif; font-size:14px; color:#333;}
+
+/* 대표 컬러 설정 */
+.essential{color:#E56353;}
+.point_color{color:#009648;}
+.normal_bold{font-family: 'NirmalaB'}
+.date{font-size: 12px;color:#999999}
+/* 라인 */
+hr{width: 100%; height: 0; border: 0; border-bottom: 1px solid #F3F3F3;margin: 0;}
+hr.space{background: #F3F3F3; width: 100%; height: 10px; border-bottom: 0; margin: 0;}
+
+/* button custom : s */
+/* only colors */
+.btn_point a{background: #009648; color: #fff;}
+.btn_sub_point a{background: #E56353; color: #fff;}
+.btn_point_line a{border: 1px solid #009648; background: #fff; color: #009648;}
+.btn_gray a{background: #E5E5E5; color: #4C4C4C}
+.btn_dark_gray a{background: #999; color: #fff}
+.btn_gray_line a{border: 1px solid #E5E5E5; color: #999}
+.btn_gray_line2 a{border: 1px solid #E5E5E5; color: #333}
+.btn_gray_line3 a{border: 1px solid #F3F3F3; color: #4C4C4C}
+.btn_deactive a{background: #E5E5E5; color: #7F7F7F}
+/* only shape */
+.btn_half_wrap{display: flex;overflow: hidden;}
+.btn_half_wrap span:first-child{margin-right: 9px;}
+.btn_half_wrap span{flex:1;}
+.btn_float{position:fixed; z-index: 100; right:5px;bottom:50px;width:78px; height:78px;}
+.btn_bottom_float{border-top: 1px solid #F3F3F3;background: #fff;display: flex;position: fixed; bottom:0;z-index: 1; left:0; width: 100%; height: 70px;padding: 10px 15px;box-sizing: border-box;}
+.btn_bottom_float .btn_float_left{flex:0 0 50px;width: 50px;margin-right: 10px;height: 50px;}
+.btn_bottom_float .btn_float_left a{display: block;padding: 12px; box-sizing: border-box;width: 100%;height: 100%;}
+.btn_bottom_float .btn_deact a{background: #E5E5E5 url('/images/icons-deactive-heart.png') no-repeat; background-position: center; background-size: 24px;}
+.btn_bottom_float .btn_float_right{flex:1}
+.btn_bottom_float .btn_float_right a{width: 100%;height: 100%;display: block;line-height: 1;width:100%;font-family: 'NirmalaB';vertical-align: middle;border-radius: 2px; text-align: center; padding: 16px 0;box-sizing: border-box; font-size: 16px;}
+.btn_md_wrap{overflow: hidden;margin-top: 20px;}
+.btn_md_left{width:calc(50% - 2px);float: left}
+.btn_md_right{width:calc(50% - 2px);float: right;margin-left:4px;}
+.btn_md_left a{line-height: 1;width:100%;font-family: 'NirmalaB';vertical-align: middle;border-radius: 2px; display: inline-block; text-align: center; padding: 16px 0;box-sizing: border-box; font-size: 16px; height: 50px;}
+.btn_md_right a{line-height: 1;width:100%;font-family: 'NirmalaB';vertical-align: middle;border-radius: 2px; display: inline-block; text-align: center; padding: 16px 0;box-sizing: border-box; font-size: 16px; height: 50px;}
+.btn_full_weight a{line-height: 20px;font-family: 'NirmalaB';vertical-align: middle;border-radius: 2px; display: block; text-align: center; height: 50px; padding: 16px 0; box-sizing: border-box; font-size: 16px;}
+.btn_full_thin a{line-height: 19px;vertical-align: middle; display: block; text-align: center; height: 35px;font-family: 'NirmalaB';padding: 8px 0; box-sizing: border-box; font-size: 14px;}
+.btn_half_wrap2{display:flex;overflow:hidden}
+.btn_half_wrap2 .btn_float_left{flex:1;margin-right: 5px;}
+.btn_half_wrap2 span a{line-height: 20px;font-family: 'NirmalaB';vertical-align: middle;border-radius: 2px; display: block; text-align: center; height: 50px; padding: 16px 0; box-sizing: border-box; font-size: 16px;}
+.btn_half_wrap2 .btn_float_right{flex:2}
+/* button custom : e */
+
+
+/* 폼 관련 */
+textarea{width: 100%; border-radius: 2px;border: 1px solid #ddd; padding: 10px; resize: none; box-sizing: border-box;-webkit-appearance: none;}
+::-webkit-input-placeholder {color:#ccc;}/* WebKit, Blink, Edge */
+:-moz-placeholder {color:#ccc; opacity:1;} /* Mozilla Firefox 4 to 18 */
+::-moz-placeholder {color:#ccc; opacity:  1;}/* Mozilla Firefox 19+ */
+:-ms-input-placeholder {color:#ccc;}/* Internet Explorer 10-11 */
+select{border:1px solid #ddd; vertical-align:middle; width:100%; height:50px; box-sizing: border-box; padding: 0 44px 0 8px; background: url('/images/i_down_arrow.png') no-repeat calc(100% - 10px) 50%; background-size: 24px; -webkit-appearance: none; border-radius: 2px; -webkit-border-radius:2px; -moz-appearance: none; appearance: none;}
+select::-ms-expand {display: none; /* remove default arrow in IE 10 and 11 */}
+select:focus > option:checked {background: #fff !important;}
+select[multiple]:focus option:checked {background: red linear-gradient(0deg, red 0%, red 100%);}
+
+/* input style */
+input{text-indent: 16px; border-radius: 2px; border: 0; width: 100%; height:50px; box-sizing: border-box;}
+input[type='text'],input[type='number'],input[type='tel'],input[type='password'],input[type='submit'],input[type='search'] {-webkit-appearance:none; -webkit-border-radius:2px;height:50px; box-sizing: border-box; border:1px solid #ddd; }
+input:checked[type='checkbox'] {background-color:#666; -webkit-appearance:checkbox} button,input[type='button'],input[type='submit'],input[type='reset'],input[type='file'] {-webkit-appearance:button; border-radius:0}
+input[type='search']::-webkit-search-cancel-button {-webkit-appearance:none}
+
+input[type="checkbox"] {display:none;}
+input[type="checkbox"] + label {display:inline-block; margin-right:40px; color: #333; font-size: 14px; font-style: normal;}
+input[type="checkbox"] + label span {display:inline-block; width:20px; height:20px; margin:-3px 10px 0 0; vertical-align:middle; background:url('/images/checkbox_off.png') right center no-repeat; cursor:pointer; background-size:20px;}
+input[type="checkbox"]:checked + label span {background:url('/images/checkbox_on.png') right center no-repeat; background-size:20px;}
+
+input[type="radio"] {display:none;}
+input[type="radio"] + label {display:inline-block; margin-right: 40px; font-size:12px; color: #333; font-style: normal;}
+input[type="radio"] + label span {display:inline-block; width:18px; height:18px; margin:-3px 10px 0 0; vertical-align:middle; background:url('/images/radio_off.png') right center no-repeat; cursor:pointer; background-size:18px;}
+input[type="radio"]:checked + label span {background:url('/images/radio_on.png') right center no-repeat; background-size:18px;}
+
+/* 테이블관련 */
+th.th_top{vertical-align: text-top;}
+th{font-weight: normal}
+table{table-layout: fixed}
+
+/* 스위치 체크박스 */
+.switch {position:relative; display:inline-block; width:40px; height:24px;}
+.check_slider {position:absolute; cursor:pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #fff; -webkit-transition: .4s; transition: .4s; border-radius: 24px; border: 1px solid #009648;}
+.check_slider:before {position: absolute; content: ""; height: 22px; width: 22px; left:-1px; bottom:-1px; background-color: #fff; border: 1px solid #009648; -webkit-transition: .4s; transition: .4s; border-radius: 50%;}
+input:checked + .check_slider {background-color: #009648;}
+input:focus + .check_slider {box-shadow: 0 0 1px #009648;}
+input:checked + .check_slider:before {-webkit-transform: translateX(16px); -ms-transform: translateX(16px); transform: translateX(16px);}
+
+/* 별점 */
+.review_rating{width: 100%; height:40px; overflow: hidden; margin: 0 auto; }
+.rating {display: inline-block;}
+.rating > input {display: none; margin: 0 5px;}
+.rating > label:before {display: inline-block; content: "\f005"; background: url('/p_images/i_star_L.png') 0 0 no-repeat; width:40px; height:40px; color:rgba(0,0,0,0); background-size: 40px;}
+.rating > input[type="radio"] + label {color: #ccc; float: right; margin: 0 5px;}
+.rating > input:checked ~ label{content: "\f005"; display: inline-block; background: url('/p_images/i_star_red_L.png'); width:40px; height:40px; padding: 0; background-size: 40px; z-index: 5;}
+.rating > input:checked ~ label:before {background:none;}
+
+/* 즐겨찾기 */
+.wish_ico a{display:block; background:#fff url('/p_images/btn_wish_off.png') no-repeat; height:20px; width:22px; line-height:20px; float: right; background-size: 22px;}
+.wish_ico a.active{background: url('/p_images/btn_wish_on.png') no-repeat; color:#fff; background-size: 22px;}
+
+/* 대표 wrap */
+.body{padding-top:50px;}
+.inner_wrap{padding-left:15px; padding-right: 15px;}
+.footer_margin{padding-bottom: 50px; box-sizing: border-box;}
+body, html , .wrap{height: 100%;}
+.vh_wrap{position: relative; min-height: 100%; overflow: hidden}
+.vh_wrap.body{min-height: calc(100% - 50px)}
+.vh_body{padding-bottom: 30px;}
+.vh_wrap.body .vh_body{padding-bottom: 120px;}
+.vh_footer{position: absolute; z-index: 1; bottom:0; width: calc(100% - 30px); left:15px;}
+
+/* 이미지센터 */
+.img_box{overflow: hidden; display: block;}
+.img_box > img{object-fit: cover; width: 100%; height: 100%;}
+.center_crop_frame{position: relative;}
+.center_crop_area{position: absolute; top:0;left:0;right:0;bottom:0;transform: translate(50%,50%);}
+.center_crop_area img{position: absolute; top:0;left:0;transform: translate(-50%,-50%); max-width: 100%; min-height:100%;}
+
+/* ------------------------------------------------------------------------------------------------------------- */
+header{height:50px; box-sizing: border-box; position:fixed; top:0; left: 0; width:100%; background: #fff; z-index: 8;}
+header.transparent{background: transparent}
+header .btn_close{position: absolute; right:0; top:50%; transform: translateY(-50%); width: 20px; padding: 15px;line-height: 0;}
+header .btn_cate{position: absolute; right:45px; top:50%; transform: translateY(-50%); width: 24px; padding: 11px;line-height: 0;}
+header .btn_alarm{position: absolute; right:0; top:50%; transform: translateY(-50%); width: 24px; padding: 11px;line-height: 0;}
+header .head_btn_back_white{position: absolute;z-index: 1;top:0;padding: 6px 10px;width: 38px;}
+header .head_btn_more_white{position: absolute;z-index: 1;top:0;right:0;padding: 6px 10px;width: 38px;}
+header img{width: 100%;}
+header .btn_back{position: absolute; left:0; top:50%; transform: translateY(-50%); width: 24px; padding: 13px 20px; line-height: 0;}
+header .btn_home{position: absolute; left:26px; top:50%; transform: translateY(-50%); width: 16px; padding: 15px; line-height: 0;}
+header h1{font-size:16px;font-family: 'NirmalaB';text-align: center; line-height:1; padding: 16px;}
+header h1.left{font-size: 18px;font-family: 'NirmalaB';text-align: left;}
+header .head_txt{color:#E1B275;font-size:16px;font-family: 'NirmalaB';position: absolute;z-index: 1;top:16px;right:20px;}
+header .head_alarm{position: relative;width: 50px;position: absolute; right:0; top:50%; transform: translateY(-50%); padding: 13px; box-sizing: border-box;}
+header .head_alarm span.spot{position: absolute;z-index: 1;top:16px;right:16px;width: 7px;height: 7px;border-radius: 7px;background: transparent linear-gradient(180deg, #E1B275 0%, #A1723E 100%) 0% 0% no-repeat padding-box;}
+
+footer ul{position: fixed; z-index: 100;bottom:0; width: 100%; height: 50px; background: #fff}
+footer li{width: 20%; font-size: 10px; color:#4C4C4C; float: left; text-align: center;}
+footer li a{width: 100%;display: inline-block;letter-spacing: -0.5px}
+footer li img{width: 48px;}
+footer li a span{overflow: hidden; margin: 6px auto 1px auto; width:24px; height: 24px; display: block;}
+footer li.active a{color:#000}
+footer li.active img{position: relative; top: 0; left: -24px; height: 24px; display: block}
+
+/* 로그인 */
+.login_wrap .logo{width: 171px;text-align: center; margin:130px auto 62px; display: block;}
+.login_wrap{width:100%; padding: 0 50px; box-sizing: border-box; margin: 0 auto;}
+.login_input_id{text-indent: 44px;background: url('/images/i_id.png') no-repeat 16px center; background-size: 24px}
+.login_input_pw{text-indent: 44px;margin:10px 0 0;background: url('/images/i_pw.png') no-repeat 16px center; background-size: 24px}
+.login_find_ul{margin:20px auto 50px; display: inline-block; overflow: hidden;}
+.login_find_ul li{color:#666666;float: left; font-size: 14px;margin-right: 25px;position: relative;}
+.login_find_ul li::after{content: '';display: block;width: 1px;height: 8px;background: #ddd;position: absolute;z-index: 1;top:5px; left:-13px}
+.login_find_ul li:first-child::after{display: none}
+.login_find_ul li:last-child{margin-right: 0;font-family: 'NirmalaB'}
+.login_wrap .btn_face a{line-height: 1;background: url('/images/i_facebook_logo.png') no-repeat 20px 13px; background-size: 10px;border: 1px solid #3B5998; color:#3B5998; font-size: 14px;}
+.login_wrap .btn_gg{margin-top: 6px;}
+.login_wrap .btn_gg a{line-height: 1;background: url('/images/i_google_logo.png') no-repeat 15px 14px; background-size: 19px;border: 1px solid #E74336; color:#E74336; font-size: 14px;}
+.login_wrap p.agree{line-height: 16px;font-size: 12px;margin-top: 20px;color:#999999}
+.login_wrap p.agree a{color:#666666; text-decoration: underline;}
+
+/* 아이디찾기, 비번찾기 결과텍스트 창 */
+.find_result{text-align: center; font-size: 16px; margin: 40px 0;line-height: 26px;}
+.find_result img{display: block; width: 60px; margin: 0 auto; margin-bottom: 20px;}
+.find_result .point{font-family: 'NirmalaB';color: ##4C4C4C;font-size: 16px;margin: 10px 0;}
+.find_result .none{color: #E56353;font-size:16px;margin: 10px 0;}
+
+/* no_search_data */
+.no_data{padding: 100px 15px; box-sizing: border-box;}
+.no_data p{text-align: center;font-size: 16px; color:#999;line-height: 1.6}
+
+/* 회원가입 동의 리스트 */
+.all_checkbox li{height: 35px; line-height: 35px}
+.all_checkbox li > span a{font-size: 14px;color:#999;float: right;width: auto;padding: 0 5px; box-sizing: border-box;}
+.all_checkbox li > span a img{width: 100%;}
+.all_checkbox li input[type="checkbox"] + label{color:#666}
+.all_checkbox li:first-of-type input[type="checkbox"] + label{font-family: 'NirmalaB';color:#222;}
+
+/* flex style */
+.flex_1, .flex_2, .flex_3{display: flex;}
+.flex_1 input, .flex_1 select{flex: 1;}
+.flex_1 span{line-height: 45px; flex: 0 0 25px; text-align: center; vertical-align: middle;}
+.flex_2 input{flex:1;}
+.flex_3 input{flex:1;  border: 1px solid #ddd;border-right: 0; border-top-right-radius: 0; border-bottom-right-radius: 0;}
+.flex_3 button{border-radius: 2px;border-top-left-radius: 0; border-bottom-left-radius: 0;width: 97px;}
+.flex_3 button.btn_enabled{border: 1px solid #009648; color:#009648}
+.flex_3 button.btn_disabled{font-family: 'NirmalaB';background-color: #E5E5E5; color:#333;}
+.timer_area input{padding-right: 45px;}
+.timer_area{position: relative;}
+.timer_area .txt_timer{line-height: 19px;position: absolute; right:110px; top:16px; color:#E56353; font-size: 14px;}
+.flex_5{display: flex;}
+.flex_5 select{flex:1;}
+.flex_5 select:first-child{margin-right: 11px;}
+/* complete 공통 */
+.complete_wrap{text-align: center;margin:0 auto;text-align: center;}
+.complete_wrap img{width:221px; margin:100px auto 30px; }
+.complete_wrap p{font-size: 16px;line-height:24px; margin: 20px 0 70px 0;}
+.complete_wrap .title{font-size: 22px;color:#333;font-family: 'NirmalaB'}
+
+.notice_ul > li{padding: 18px 15px; border-bottom: 1px solid #F3F3F3;box-sizing: border-box;}
+.notice_ul > li a{margin-bottom: 7px;font-size: 16px;display: block}
+.notice_ul > li span{font-size: 12px;color#7F7F7F}
+.notice_title{font-family: 'NirmalaB';margin-top: 18px;font-size: 16px;margin-left: 15px;margin-bottom: 7px;}
+.notice_date{font-size: 12px;color:#7F7F7F;margin-bottom: 18px;margin-left: 15px;}
+.notice_content{padding: 15px;box-sizing: border-box;font-size: 14px;line-height: 24px; color:#4C4C4C}
+.faq_nav_ul>li{line-height: 20px;float: left;padding: 8px 16px; color:#7F7F7F;position: relative;height: 20px;}
+.faq_nav_ul>li::after{content: '';display: block; width: 1px;height: 12px;background: #E5E5E5;position: absolute;z-index: 1;top:12px;left:-1px;}
+.faq_nav_ul>li input[type="radio"]:checked + label{color:#333333; font-family: 'NirmalaB'}
+.faq_nav_ul>li input[type="radio"] + label{margin-right: 0;color:#7F7F7F}
+.faq_list li{position: relative;}
+.faq_list li .trigger{min-height: 58px;padding: 16px; box-sizing: border-box;font-size: 16px;}
+.faq_list li .question{vertical-align: middle; margin-top: -4px;width: 16px; margin-right: 11px;}
+.faq_list li .arrow.rotate{transform: rotate(180deg);}
+.faq_list li .arrow{width: 10px;position: absolute; top:25px; right:20px;}
+.faq_list li .answer_wrap{color:#4C4C4C;line-height: 24px;display: none;background: #F3F3F3 url('/images/i_answer.png') no-repeat 16px 23px; background-size: 16px;padding: 20px 15px;padding-left: 43px;   box-sizing: border-box;}
+header .qa_title{color:#009648;font-size:14px;font-family: 'NirmalaB';position: absolute;z-index: 1;top:16px;right:20px;}
+header .qa_title.del{color:#AB0000}
+.qa_ul > li{overflow: hidden;border-bottom: 1px solid #ddd; background: url('/images/i_question.png') no-repeat 15px 21px; background-size: 16px;padding: 18px 15px 18px 44px; box-sizing: border-box;}
+.qa_ul > li .deactive{float: right;padding: 6px;font-family: 'NirmalaB';color:#fff;background:#009648; border:1px solid #009648; border-radius:4px;font-size: 12px;font-family: 'NirmalaB'}
+.qa_ul > li .active{float: right;padding: 6px;font-family: 'NirmalaB';color:#009648; border:1px solid #009648; border-radius:4px;font-size: 12px;font-family: 'NirmalaB'}
+.qa_ul > li .title{display: inline-block; width:100%;overflow: hidden; text-overflow: ellipsis; white-space: nowrap;font-size: 16px;margin-bottom: 7px;}
+.qa_ul > li .title span{font-size: 16px;color:#333;font-family: 'NirmalaB';display:inline-block;}
+.qa_ul > li span{font-size: 12px;color:#7F7F7F;display: block}
+.qa_top_txt{color:#4C4C4C;line-height: 24px;background: url('/images/i_question.png') no-repeat 15px 21px; background-size: 16px;padding: 18px 15px 18px 44px; box-sizing: border-box;}
+.qa_top_txt .title{font-family: 'NirmalaB';font-size: 16px;margin-bottom: 7px;}
+.qa_top_txt .date{font-size: 12px;color:#7F7F7F;margin-bottom: 18px;}
+.qa_bottom_txt .date{font-size: 12px;color:#7F7F7F;margin-top: 7px;}
+.qa_bottom_txt {color:#4C4C4C;line-height: 24px;background: #F3F3F3 url('/images/i_answer.png') no-repeat 15px 21px; background-size: 16px;padding: 20px 15px 20px 44px; box-sizing: border-box;}
+.qa_reg_page textarea{height: 240px;border-radius: 2px;}
+.over_txt{width:calc(100% - 50px);max-width: calc(100% - 180px);position: absolute;z-index: 1;left:50%;transform: translateX(-50%);overflow: hidden;text-overflow: ellipsis; white-space: nowrap}
+/* 셋팅 리스트 */
+.mypage_title{padding:20px 20px 10px 20px;font-size: 12px;color:#999999; font-family: 'NotoSansKR-Bold'}
+.list_ul>li{font-size: 16px;padding: 14px 20px; box-sizing: border-box;}
+.setting>li{background: url('/images/arrow_right.png') no-repeat calc(100% - 20px) center; background-size:12px; }
+.setting>li>a{display: block;width: 100%;}
