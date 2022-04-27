@@ -41,7 +41,7 @@ class Mypage_v_1_0_0 extends MY_Controller{
 		parent::__construct();
 
 		if(!$this->session->userdata("member_idx") ){
-			redirect("/".mapping('login')."?return_url=/".mapping('mypage'));
+			redirect("/".$this->nationcode.'/'.mapping('login')."?return_url=/".mapping('mypage'));
 			exit;
 		}
 
