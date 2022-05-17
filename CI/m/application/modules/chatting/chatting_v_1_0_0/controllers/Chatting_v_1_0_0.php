@@ -135,7 +135,7 @@ class Chatting_v_1_0_0 extends MY_Controller{
 
 		if(count($result)<1){
 			$response->code = "-1";
-			$response->code_msg = $this->global_msg->code_msg('-1');
+			$response->code_msg = lang("lang_common_00822","문제가 발생하였습니다. 관리자에게 문의해주세요.");
 			echo json_encode($response);
 			exit;
 		}
@@ -212,7 +212,7 @@ class Chatting_v_1_0_0 extends MY_Controller{
 
 		}else{
 			$response->code = "1000";
-			$response->code_msg = $this->global_msg->code_msg('1000');
+			$response->code_msg = lang("lang_common_00821","정상적으로 처리되었습니다.");
 			$response->list_cnt = $x;
 			$response->page_num = (int)$page_num;
 			$response->total_page =	$total_page;
@@ -284,7 +284,7 @@ class Chatting_v_1_0_0 extends MY_Controller{
 
 		if($result < 0){
 			$response->code = "-1";
-			$response->code_msg = $this->global_msg->code_msg('-1');
+			$response->code_msg = lang("lang_common_00822","문제가 발생하였습니다. 관리자에게 문의해주세요.");
 		}else{
 
 			if($img_path !="" && $comment ==""){
@@ -300,7 +300,7 @@ class Chatting_v_1_0_0 extends MY_Controller{
  			 $this->_alarm_action($partner_member_idx,0,$index, $alarm_data);
 
 			$response->code = "1000";
-			$response->code_msg = $this->global_msg->code_msg('1000');
+			$response->code_msg = lang("lang_common_00821","정상적으로 처리되었습니다.");
     }
 		echo json_encode($response);
 		exit;
@@ -321,10 +321,10 @@ class Chatting_v_1_0_0 extends MY_Controller{
 
 		if($result < 0){
 			$response->code = "-1";
-			$response->code_msg = $this->global_msg->code_msg('-1');
+			$response->code_msg = lang("lang_common_00822","문제가 발생하였습니다. 관리자에게 문의해주세요.");
 		}else{
 			$response->code = "1000";
-			$response->code_msg = $this->global_msg->code_msg('1000');
+			$response->code_msg = lang("lang_common_00821","정상적으로 처리되었습니다.");
 		}
 		echo json_encode($response);
 		exit;
@@ -343,7 +343,7 @@ class Chatting_v_1_0_0 extends MY_Controller{
 		$check=$this->model_chatting->member_read_count($data);
 
 		$response->code = "1000";
-		$response->code_msg = $this->global_msg->code_msg('1000');
+		$response->code_msg = lang("lang_common_00821","정상적으로 처리되었습니다.");
 		$response->not_read_cnt = $check;
 		$response->red_dot_yn = ($check>0)? "Y":"N";
 
@@ -401,7 +401,7 @@ public function chatting_member_list(){
 
 	}else{
 		$response->code = "1000";
-		$response->code_msg = $this->global_msg->code_msg('1000');
+		$response->code_msg = lang("lang_common_00821","정상적으로 처리되었습니다.");
 		$response->list_cnt = $x;
 		$response->page_num = (int)$page_num;
 		$response->total_page =	$total_page;

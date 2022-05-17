@@ -2,6 +2,8 @@
 $lang['lang_dev_00000']='no_translation';
 $lang['lang_dev_00001']='ERROR. No Idx Code.';
 
+$lang['lang_add_plus_00001']='এই মুহূর্তে আর কোনো ক্রয় বিক্রয়ের চুক্তি নেই।';
+
 $lang['lang_find_pw_00001']='পাসওয়ার্ড পুনরুদ্ধার মেইল';
 $lang['lang_find_pw_00003']='পাসওয়ার্ড রিসেট';
 $lang['lang_find_pw_00004']='দয়া করে পাসওয়ার্ড পুনরুদ্ধারের জন্য লিংকে ক্লিক করুন';

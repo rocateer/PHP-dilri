@@ -2,6 +2,9 @@
 $lang['lang_dev_00000']='no_translation';
 $lang['lang_dev_00001']='ERROR. No Idx Code.';
 
+$lang['lang_add_plus_00001']='There is no on going deal in progress.';
+
+
 $lang['lang_find_pw_00001']='Password Reset Mail';
 $lang['lang_find_pw_00003']='Reset password';
 $lang['lang_find_pw_00004']='Please Click the link to reset password';

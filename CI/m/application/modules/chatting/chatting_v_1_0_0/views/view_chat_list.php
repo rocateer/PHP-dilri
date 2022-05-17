@@ -4,7 +4,7 @@
 <div class="body inner_wrap footer_margin">
 <div class="no_datas mb30" id="no_data" style="display:none">
 		<img src="/images/icon-black-chat_c.png" alt="">
-		<p><?=lang("lang_dev_00000","진행중인 거래가 없습니다.")?></p>
+		<p><?=lang("lang_add_plus_00001","진행중인 거래가 없습니다.")?></p>
 	</div>
 	<ul class="chat_ul mt30" id="list_ajax"></ul>
 </div>
@@ -142,6 +142,9 @@ function chatting_del(){
 			} else {
 				alert(result.code_msg);
 				$('#chatting_room_'+chatting_room_idx).remove();
+				if ($('.chatting_li').length==0) {
+					$('#no_data').css('display', 'block');
+				}
 			}
 			modal_close_slide('more');
 		}

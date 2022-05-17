@@ -2,6 +2,8 @@
 $lang['lang_dev_00000']='번역_문구_미개발';
 $lang['lang_dev_00001']='ERROR. No Idx Code.';
 
+$lang['lang_add_plus_00001']='진행중인 거래가 없습니다.';
+
 $lang['lang_find_pw_00001']='비밀번호 변경 메일 입니다.';
 $lang['lang_find_pw_00003']='비밀번호 변경';
 $lang['lang_find_pw_00004']='비밀 번호 변경을 위해 아래 링크로 이동하여 주세요';
