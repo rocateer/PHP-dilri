@@ -147,8 +147,8 @@ class Community_v_1_0_0 extends MY_Controller{
 	//등록
   public function board_reg_in(){
 		$img_path =  $this->_input_check("img_path[]",array());
-		$tags =  $this->_input_check("tags",array("empty_msg"=>"해시태그를 입력하세요."));
-		$contents =  $this->_input_check("contents",array("empty_msg"=>"내용을 입력하여 주세요."));
+		$tags =  $this->_input_check("tags",array("empty_msg"=>lang("lang_product_00161","해시태그를 입력해 주세요.")));
+		$contents =  $this->_input_check("contents",array("empty_msg"=>lang("lang_product_00161","내용을 입력해 주세요.")));
 
 		$data['img_path'] = $this->global_function->array_to_str($img_path);
 		$data['tags'] = $tags;
@@ -194,8 +194,8 @@ class Community_v_1_0_0 extends MY_Controller{
 	public function board_mod_up(){
 		$board_idx =  $this->_input_check("board_idx",array(lang("lang_dev_00001","키가 누락되었습니다.")));
 		$img_path =  $this->_input_check("img_path[]",array());
-		$tags =  $this->_input_check("tags",array("empty_msg"=>"해시태그를 입력하세요."));
-		$contents =  $this->_input_check("contents",array("empty_msg"=>"내용을 입력하여 주세요."));
+		$tags =  $this->_input_check("tags",array("empty_msg"=>lang("lang_product_00161","해시태그를 입력해 주세요.")));
+		$contents =  $this->_input_check("contents",array("empty_msg"=>lang("lang_product_00161","내용을 입력해 주세요.")));
 
 		$data['img_path'] = $this->global_function->array_to_str($img_path);
 		$data['tags'] = $tags;
