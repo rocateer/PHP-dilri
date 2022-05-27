@@ -3,6 +3,11 @@ $lang['lang_dev_00000']='no_translation';
 $lang['lang_dev_00001']='ERROR. No Idx Code.';
 
 $lang['lang_add_plus_00001']='এই মুহূর্তে আর কোনো ক্রয় বিক্রয়ের চুক্তি নেই।';
+$lang['lang_add_plus_00002']='দয়া করে আপনার মন্তব্য  করুন।';
+$lang['lang_add_plus_00003']='হ্যালো';
+$lang['lang_add_plus_00004']='আপনি পয়েন্ট অর্জন করেছেন।';
+$lang['lang_add_plus_00005']='আপনি নতুন ব্যাজ অর্জন করেছেন';
+$lang['lang_add_plus_00006']='পাঠান';
 
 $lang['lang_find_pw_00001']='পাসওয়ার্ড পুনরুদ্ধার মেইল';
 $lang['lang_find_pw_00003']='পাসওয়ার্ড রিসেট';

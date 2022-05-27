@@ -3,6 +3,11 @@ $lang['lang_dev_00000']='no_translation';
 $lang['lang_dev_00001']='ERROR. No Idx Code.';
 
 $lang['lang_add_plus_00001']='There is no on going deal in progress.';
+$lang['lang_add_plus_00002']='Please write your Comment.';
+$lang['lang_add_plus_00003']='Hello!';
+$lang['lang_add_plus_00004']='You have earned Point.';
+$lang['lang_add_plus_00005']='You have earned new badge.';
+$lang['lang_add_plus_00006']='Send';
 
 
 $lang['lang_find_pw_00001']='Password Reset Mail';

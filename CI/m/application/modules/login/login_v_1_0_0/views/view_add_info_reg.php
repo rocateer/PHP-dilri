@@ -8,7 +8,7 @@
 <!-- header : e -->
 <div class="body vh_wrap">
 	<div class="vh_body inner_wrap">
-		<h5 class="mt30 mb6">반갑습니다!</h5>
+		<h5 class="mt30 mb6"><?=lang("lang_add_plus_00003","반갑습니다!")?></h5>
 		<p><?=lang("lang_login_00100","플랫폼 이용을 위해서는 다음의 정보를 추가로 입력 후 이용하실 수 있습니다.")?></p>
 		<div class="label"><?=lang("lang_join_00069","이름")?> <span class="essential"> *</span></div>
 		<input type="text" name="member_name" id="member_name" value="">

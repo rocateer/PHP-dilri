@@ -3,6 +3,11 @@ $lang['lang_dev_00000']='번역_문구_미개발';
 $lang['lang_dev_00001']='ERROR. No Idx Code.';
 
 $lang['lang_add_plus_00001']='진행중인 거래가 없습니다.';
+$lang['lang_add_plus_00002']='댓글을 입력해주세요.';
+$lang['lang_add_plus_00003']='반갑습니다!';
+$lang['lang_add_plus_00004']='포인트가 지급되었습니다.';
+$lang['lang_add_plus_00005']='새로운 뱃지를 획득하였습니다.';
+$lang['lang_add_plus_00006']='전송';
 
 $lang['lang_find_pw_00001']='비밀번호 변경 메일 입니다.';
 $lang['lang_find_pw_00003']='비밀번호 변경';

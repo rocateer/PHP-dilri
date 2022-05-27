@@ -361,7 +361,7 @@ class Community_v_1_0_0 extends MY_Controller{
 		$board_idx = $this->_input_check('board_idx',array("empty_msg"=>lang("lang_dev_00001","키가 누락되었습니다."),"focus_id"=>"board_idx"));
 		$depth = $this->_input_check('depth',array());
 		$relpy_member_idx = $this->_input_check('relpy_member_idx',array());
-		$reply_comment = $this->_input_check('reply_comment',array("empty_msg"=>"댓글을 입력해주세요.","focus_id"=>"reply_comment"));
+		$reply_comment = $this->_input_check('reply_comment',array("empty_msg"=>lang("lang_add_plus_00002","댓글을 입력해주세요."),"focus_id"=>"reply_comment"));
 		if($depth == "0"){
 			$parent_board_reply_idx = NULL;
 		}else{

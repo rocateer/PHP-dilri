@@ -218,12 +218,12 @@ Class Model_common extends MY_Model {
 			if ($this->current_nation=='kr') {
 				$data['msg']=$msg= '포인트가 지급되었습니다.';
 			} else if ($this->current_nation=='bd') {
-				$data['msg']=$msg= '포인트가 지급되었습니다.';
+				$data['msg']=$msg= 'আপনি পয়েন্ট অর্জন করেছেন।';
 			}else{
-				$data['msg']=$msg= '포인트가 지급되었습니다.';
+				$data['msg']=$msg= 'You have earned Point.';
 			}
 			
-			$data['msg']=$msg= '포인트가 지급되었습니다.';
+			// $data['msg']=$msg= '포인트가 지급되었습니다.';
 			$data["index"] ="111";
 			$data["alarm_yn"] =$row->alarm_yn;
 
@@ -433,9 +433,9 @@ Class Model_common extends MY_Model {
 			if ($this->current_nation=='kr') {
 				$data['msg']=$msg= '새로운 뱃지를 획득하였습니다.';
 			} else if ($this->current_nation=='bd') {
-				$data['msg']=$msg= '새로운 뱃지를 획득하였습니다.';
+				$data['msg']=$msg= 'আপনি নতুন ব্যাজ অর্জন করেছেন';
 			}else{
-				$data['msg']=$msg= '새로운 뱃지를 획득하였습니다.';
+				$data['msg']=$msg= 'You have earned new badge.';
 			}
 			$data["index"] ="110";
 			$data["alarm_yn"] =$row->alarm_yn;
