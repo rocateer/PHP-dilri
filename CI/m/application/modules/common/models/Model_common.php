@@ -199,6 +199,7 @@ Class Model_common extends MY_Model {
 							0 as corp_idx,
 							FN_AES_DECRYPT(a.member_name) AS member_name,
 							a.all_alarm_yn as alarm_yn,
+							a.current_lang,
 							a.device_os,
 							a.gcm_key
 						from tbl_member as a
@@ -215,9 +216,9 @@ Class Model_common extends MY_Model {
 			$data['gcm_key'] = $row->gcm_key;
 			$data['device_os'] = $row->device_os;
 			$data['title']=$title= '';
-			if ($this->current_nation=='kr') {
+			if ($row->current_nation=='kr') {
 				$data['msg']=$msg= '포인트가 지급되었습니다.';
-			} else if ($this->current_nation=='bd') {
+			} else if ($row->current_nation=='bd') {
 				$data['msg']=$msg= 'আপনি পয়েন্ট অর্জন করেছেন।';
 			}else{
 				$data['msg']=$msg= 'You have earned Point.';
@@ -414,6 +415,7 @@ Class Model_common extends MY_Model {
 							0 as corp_idx,
 							FN_AES_DECRYPT(a.member_name) AS member_name,
 							a.all_alarm_yn as alarm_yn,
+							a.current_lang,
 							a.device_os,
 							a.gcm_key
 						from tbl_member as a
@@ -430,9 +432,9 @@ Class Model_common extends MY_Model {
 			$data['gcm_key'] = $row->gcm_key;
 			$data['device_os'] = $row->device_os;
 			$data['title']=$title= '';
-			if ($this->current_nation=='kr') {
+			if ($row->current_nation=='kr') {
 				$data['msg']=$msg= '새로운 뱃지를 획득하였습니다.';
-			} else if ($this->current_nation=='bd') {
+			} else if ($row->current_nation=='bd') {
 				$data['msg']=$msg= 'আপনি নতুন ব্যাজ অর্জন করেছেন';
 			}else{
 				$data['msg']=$msg= 'You have earned new badge.';
