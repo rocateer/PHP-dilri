@@ -19,8 +19,13 @@
 	<div class="replying"  id="reply_tag" style="display:none"></div>
 	<!-- <div class="replying"  id="reply_tag" style="display:none">@단호박님에게 답글을 남기는 중</div> -->
 	<input type="text" placeholder="<?=lang("lang_community_00468","매너있는 댓글을 입력해 주세요.")?>" id="cmt_input">
-	<img src="/images/btn_send.png" onclick="board_comment_reg_in()" alt="전송" class="btn_send">
-</div>
+	<? if($this->input->cookie('current_nation')=='kr'){ ?>
+		<img src="/images/btn_send.png" onclick="board_comment_reg_in()" alt="<?=lang("lang_add_plus_00006","전송")?>" class="btn_send">
+	<? } else if($this->input->cookie('current_nation')=='us') {?>
+		<img src="/images/btn_send_us.png" onclick="board_comment_reg_in()" alt="<?=lang("lang_add_plus_00006","전송")?>" class="btn_send">
+	<? } else {?>
+		<img src="/images/btn_send_bd.png" onclick="board_comment_reg_in()" alt="<?=lang("lang_add_plus_00006","전송")?>" class="btn_send">
+	<? } ?></div>
 <div class="modal_more">
   <ul class="more_ul">
 		<li id="del_btn_li">
